@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-color: #00b088;
+
+}
+
+/**!------------------------INDEX---------------------------------**/
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 1.7rem;
+    padding-left: 70px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+span {
+    color: rgb(175, 138, 45);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f6f5fa;
+    align-items: center;
+}
+
+/*!--------------------------ANIMACIÓN MENÚ---------------------*/
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 13px;
+
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+}
+
+nav ul li a {
+    position: relative;
+    font-size: 20px;
+    color: white;
+    border-radius: 0px 0px 20px 20px;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    background-color: var(--primary-color);
+
+}
+
+nav ul li a:before {
+    content: '';
+    background: rgb(175, 138, 45);
+    position: absolute;
+    bottom: -10px;
+    height: 4px;
+    width: 0%;
+    transition: ease 1.2s;
+    text-decoration: none;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+    transition: ease-in .4s;
+
+}
+
+/*!---------------------- REDES SOCIALES --------------------- */
+.social {
+    position: fixed;
+    left: 0;
+    top: calc(50% - 90px);
+    /* Para que quede centrada le decimos que al 50% del alto le reste la mitad del alto de la barra: 16px de la letra + 10 padding-top + 10padding-bottom */
+    z-index: 2000;
+}
+
+.social ul {
+    list-style: none;
+}
+
+.social ul li a {
+    display: inline-block;
+    /* porque le quiero agregar padding */
+    color: white;
+    background: var(--primary-color);
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: all 500ms ease
+        /* transicion a todas las propiedades*/
+}
+
+.social ul li .icon-facebook {
+    background: #3b5998;
+}
+
+.social ul li .icon-twitter {
+    background: #00abf0;
+}
+
+.social ul li .icon-instagram {
+    background: #E4405F;
+}
+
+.social ul li .icon-whatsapp {
+    background: #25D366;
+}
+
+.social ul li .icon-mail {
+    background: #666666;
+}
+
+.social ul li a:hover {
+    background: var(--primary-color);
+    padding: 10px 30px;
+}
+
+
+
+/**!-----------------------SLIDER-----------------------**/
+.slider {
+    width: 100%;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.slider ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 400%;
+
+    animation: cambio 20s infinite alternate linear;
+}
+
+.slider li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes cambio {
+    0% {
+        margin-left: 0;
+    }
+
+    20% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
+}
+
+
+
+
+/**TODO--------------------ODONTOLOGOS--------------------------**/
+
+.nav-link {
+    color: var(--primary-color);
+    font-size: 1.6rem;}
+
+.nav-link:hover {
+    color: #327562;
+}
+
+
+.fondo,
+.fondo-odontologo {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.9)),
+        url('../img/img1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 900px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#div_odontologo_table>h2 {
+    margin-top: 20px;
+}
+
+thead th {
+    color: white;
+}
+
+tbody {
+    color: white;
+}
+
+/**TODO-----------------------------ALTA ODONTOLOGOS----------------------------**/
+.admon {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
